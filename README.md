@@ -1,28 +1,27 @@
 # Prettify JSON
 
-Скрипт для отображения JSON в удобном для чтения виде.
-Для работы скрипта необходимо ввести пусть до файла в формате JSON.
+This script allows to view JSON file in readable form.
+You need to specify JSON file path as a parameter. 
 
 # Quickstart
 
-Скрипт требует для своей работы установленного интерпретатора Python версии 3.5.
+The script needs Python 3.5 interpreter.
 
-Пример запуска скрипта на Linux, Python 3.5:
+Example of script launch on Linux, Python 3.5:
 
 ```bash
 $ python pprint_json.py <path to file>
 ```
 
-Пример работы скрипта:
+Example of script output:
 
 ```bash
-$ python pprint_json.py my.json
 {
-    "пример": {
-        "Заголовок": "пример словаря",
-        "список": [
-            "элемент 1",
-            "элемент 2"
+    "example": {
+        "Header": "dictionary example",
+        "list": [
+            "item 1",
+            "item 2"
         ]
     }
 }
