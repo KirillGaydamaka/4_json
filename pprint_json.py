@@ -7,8 +7,8 @@ def load_data(filepath):
         return json.loads(file.read())
 
 
-def pretty_print_json(data):
-    print(json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False))
+def pretty_print_json(parsed_data):
+    print(json.dumps(parsed_data, indent=4, sort_keys=True, ensure_ascii=False))
 
 
 def create_parser():
@@ -22,8 +22,8 @@ def create_parser():
 def main():
     try:
         filepath = create_parser().filepath
-        data = load_data(filepath)
-        pretty_print_json(data)
+        parsed_data = load_data(filepath)
+        pretty_print_json(parsed_data)
     except FileNotFoundError:
         exit('Файл не найден')
     except json.decoder.JSONDecodeError:
